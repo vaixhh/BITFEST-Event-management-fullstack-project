@@ -1,4 +1,4 @@
-# 🎉 BITFEST — College Event Management System
+#  BITFEST — College Event Management System
 
 A full-stack web application built for managing college fest events.
 
