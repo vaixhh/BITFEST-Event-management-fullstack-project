@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | BITFEST</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BF</span>
+        <span class="brand-text">BITFEST</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#" id="logoutBtn" class="btn btn-primary btn-small">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="admin-hero">
+    <div class="container">
+      <p class="eyebrow">Admin panel</p>
+      <h1>Manage BITFEST</h1>
+      <p>Create events, manage registrations, and update completion status.</p>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container admin-grid">
+      <div class="admin-panel">
+        <h2 id="formTitle">Create Event</h2>
+        <form id="eventForm" class="admin-form">
+          <input type="text" id="title" placeholder="Event Title" required />
+          <textarea id="description" placeholder="Event Description" required></textarea>
+          <select id="category" required>
+            <option value="Tech">Tech</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Non-Tech">Non-Tech</option>
+          </select>
+          <input type="date" id="date" required />
+          <input type="text" id="time" placeholder="Time (e.g. 9:00 AM)" required />
+          <input type="text" id="venue" placeholder="Venue (e.g. Lab 1)" />
+          <textarea id="rules" placeholder="Rules (one per line)"></textarea>
+          <input type="number" id="totalSeats" placeholder="Total Seats" min="1" />
+          <input type="number" id="fee" placeholder="Fee in INR (0 for free)" min="0" />
+          <input type="text" id="prize" placeholder="Prize (optional)" />
+          <button type="submit" class="btn btn-primary" id="submitBtn">Add Event</button>
+          <button type="button" class="btn btn-ghost" id="resetBtn">Reset</button>
+        </form>
+      </div>
+      <div class="admin-panel">
+        <h2>Manage Events</h2>
+        <div class="admin-list" id="eventsList"></div>
+      </div>
+      <div class="admin-panel">
+        <h2>Registrations</h2>
+        <div class="admin-list" id="registrationsList"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Email | BITFEST</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BF</span>
+        <span class="brand-text">BITFEST</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="auth-page">
+    <div class="container auth-grid">
+      <div class="auth-copy">
+        <p class="eyebrow">Email verification</p>
+        <h1>Activate your account</h1>
+        <p>We are verifying your email. This should take a moment.</p>
+      </div>
+      <div class="auth-card">
+        <h2>Verification status</h2>
+        <p class="auth-sub" id="statusMessage">Verifying your email...</p>
+        <div class="auth-actions">
+          <a href="login.html" class="btn btn-primary">Go to Login</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="verify.js"></script>
+</body>
+</html>

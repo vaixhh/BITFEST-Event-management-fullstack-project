@@ -1,0 +1,70 @@
+﻿.admin-hero {
+  padding: 130px 0 40px;
+  background: radial-gradient(circle at top left, rgba(108, 99, 255, 0.2), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 229, 255, 0.2), transparent 55%);
+}
+
+.admin-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 12px;
+}
+
+.admin-hero p {
+  color: var(--text-muted);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.admin-panel {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.admin-panel h2 {
+  font-family: var(--font-display);
+  margin-bottom: 12px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-family: inherit;
+}
+
+.admin-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.admin-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-item {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}

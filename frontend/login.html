@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | BITFEST</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BF</span>
+        <span class="brand-text">BITFEST</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="auth-page">
+    <div class="container auth-grid">
+      <div class="auth-copy">
+        <p class="eyebrow">Welcome back</p>
+        <h1>Login to your BITFEST account</h1>
+        <p>Access your dashboard, registrations, and certificates.</p>
+        <div class="auth-note">
+          If you are new, complete OTP verification after registration.
+        </div>
+      </div>
+      <div class="auth-card">
+        <h2>Sign in</h2>
+        <p class="auth-sub">Use your registered email and password.</p>
+        <form id="loginForm">
+          <label>Email</label>
+          <input type="email" id="email" required placeholder="you@example.com" />
+
+          <label>Password</label>
+          <input type="password" id="password" required placeholder="Enter your password" />
+
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </div>
+        </form>
+
+        <p class="auth-footer">
+          Do not have an account? <a href="register.html">Register now</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

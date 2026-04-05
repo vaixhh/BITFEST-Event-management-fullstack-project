@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | BITFEST</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="event.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">BF</span>
+        <span class="brand-text">BITFEST</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="login.html" class="btn btn-primary btn-small">Login</a>
+        <a href="dashboard.html" class="btn btn-ghost btn-small">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="events-hero">
+    <div class="container">
+      <p class="eyebrow">Choose your track</p>
+      <h1>Explore BITFEST Events</h1>
+      <p>Browse events, view details, and register in minutes.</p>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="events-toolbar">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search events by name" />
+        <div class="filter-group" role="group" aria-label="Filter events by category">
+          <button class="filter-tab is-active" type="button" data-category="Tech">Tech</button>
+          <button class="filter-tab" type="button" data-category="Workshop">Workshop</button>
+          <button class="filter-tab" type="button" data-category="Non-Tech">Non-Tech</button>
+        </div>
+      </div>
+      <div id="eventsSections" class="events-sections"></div>
+    </div>
+  </section>
+
+  <!-- Event details modal -->
+  <div id="eventModal" class="event-modal hidden" role="dialog" aria-labelledby="eventModalTitle" aria-modal="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-content" id="modalContent"></div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modalRegisterBtn">Register & Pay</button>
+        <span id="modalStatus" class="modal-status"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login required modal -->
+  <div id="authModal" class="auth-modal hidden" role="dialog" aria-labelledby="authModalTitle" aria-modal="true">
+    <div class="auth-modal-overlay" id="authModalOverlay"></div>
+    <div class="auth-modal-panel" role="document">
+      <h3 id="authModalTitle">Login Required</h3>
+      <p id="authModalMessage">You must be logged in to register and pay for this event.</p>
+      <div class="auth-modal-actions">
+        <button class="btn btn-primary" id="authModalLoginBtn">Login</button>
+        <button class="btn btn-ghost" id="authModalCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="script.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>
